@@ -8,6 +8,7 @@
 
     --text: #111111;
     --text-light: #777777;
+    --text-light-2: #444444;
 
     font-family: 'Roboto', sans-serif;
 }
@@ -118,6 +119,20 @@ main {
 #top-recipes .card p {
     font-size: 0.875rem;
     color: var(--text-light);
+}
+
+/** ABOUT ******************/
+#page-about h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+#page-about p {
+    margin-bottom: 1.875rem;
+    color: var(--text-light-2);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
 }
 
 /** FOOTER ******************/
