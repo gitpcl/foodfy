@@ -87,6 +87,10 @@ main {
 }
 
 /** TOP RECIPES *****/
+#top-recipes h1 {
+    font-size: 1.5rem;
+    margin-bottom:1.25rem ;
+}
 
 #top-recipes .cards {
     display:grid;
@@ -103,7 +107,7 @@ main {
 #top-recipes .card img {
     border-radius: 0.938rem;
     margin-bottom: 1.25rem;
-    max-width: 18.75rem;
+    max-width: 100%;
 }
 
 #top-recipes .card h2 {
