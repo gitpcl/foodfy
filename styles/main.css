@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+
+:root {
+    --white: #fff;
+    --gray: #EEEEEE;
+    --gray-light: #999999;
+    --pink: #FBDFDB;
+
+    --text: #111111;
+    --text-light: #777777;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header,
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/** HEAD ******************/
+header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+header img {
+    margin-right: 10%;
+}
+
+/** NAV *****/
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    margin-right: 30px;
+}
+
+/** MAIN ******************/
+main {
+    min-height: calc(100vh - 5.688rem - 3.875rem);
+}
+
+/** BANNER *****/
+
+#banner {
+    background: var(--pink);
+    border-radius: 1.875rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 7.313rem 0 0 3.75rem;
+
+    margin-bottom: 3.125rem;
+    
+}
+
+#banner div {
+    width: 40%;
+}
+
+#banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#banner p {
+    opacity: 0.7;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+#banner img {
+    position: relative;
+    /* top:4.125rem; */
+    right:6.25rem;
+    bottom:0;
+}
+
+/** TOP RECIPES *****/
+
+#top-recipes .cards {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+    margin-bottom: 1.875rem;
+}
+
+#top-recipes .card {
+    margin: 0 auto;
+}
+
+#top-recipes .card img {
+    border-radius: 0.938rem;
+    margin-bottom: 1.25rem;
+    max-width: 18.75rem;
+}
+
+#top-recipes .card h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+#top-recipes .card p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/** FOOTER ******************/
+ footer {
+     background: var(--gray);
+     color: var(--gray-light);
+     
+     font-size: 0.875rem;
+     padding: 1.438rem;
+     text-align: center;
+ }
