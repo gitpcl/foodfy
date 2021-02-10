@@ -1,0 +1,53 @@
+.modal-overlay {
+    background: var(--bg);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+
+    opacity:0;
+    visibility: hidden;
+}
+
+.modal {
+    background: var(--white);
+    width: 37.5rem;
+    height: 25.813rem;
+    margin: 25vh auto;
+
+    border-radius: 1rem;
+
+    padding: 1.875rem; 
+
+    text-align: center;
+}
+
+.modal img {
+    border-radius: 1rem;
+    width: 100%;
+    max-height: 12.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.modal h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.313rem;
+}
+
+.modal p {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 3.75rem;
+}
+
+.modal a {
+    color: var(--gray-light);
+    text-decoration: none;
+}
+
+/** MODAL.ACTIVE *******/
+.modal-overlay.active {
+    opacity:1;
+    visibility: visible;
+}
