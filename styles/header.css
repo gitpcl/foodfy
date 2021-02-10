@@ -1,0 +1,18 @@
+header {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+#logo {
+    margin-right: 10%;
+}
+
+/** NAV *****/
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    margin-right: 30px;
+}

@@ -1,0 +1,12 @@
+#page-about h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+#page-about p {
+    margin-bottom: 1.875rem;
+    color: var(--text-light-2);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}

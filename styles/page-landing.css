@@ -1,0 +1,40 @@
+#page-landing #banner {
+    background: var(--pink);
+    border-radius: 1.875rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 7.313rem 0 0 3.75rem;
+
+    margin-bottom: 3.125rem;
+    
+}
+
+#page-landing #banner div {
+    width: 40%;
+}
+
+#page-landing #banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#page-landing #banner p {
+    opacity: 0.7;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+#page-landing #banner img {
+    position: relative;
+    /* top:4.125rem; */
+    right:6.25rem;
+    bottom:0;
+}
+
+/** TOP RECIPES *****/
+#page-landing #top-recipes h1 {
+    font-size: 1.5rem;
+    margin-bottom:1.25rem ;
+}

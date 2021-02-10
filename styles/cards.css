@@ -1,0 +1,26 @@
+.cards {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+    margin-bottom: 1.875rem;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+.card img {
+    border-radius: 0.938rem;
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+}
+.card h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
