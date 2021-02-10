@@ -51,3 +51,11 @@
     opacity:1;
     visibility: visible;
 }
+
+/** MOBILE Version *****/
+@media (max-width: 768px) {
+    .modal {
+        width: 20rem;
+        height: 21rem;
+    }
+}
