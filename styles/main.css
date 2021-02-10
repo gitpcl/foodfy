@@ -46,13 +46,13 @@ nav a {
 }
 
 /** MAIN ******************/
-main {
+#page-landing {
     min-height: calc(100vh - 5.688rem - 3.875rem);
 }
 
 /** BANNER *****/
 
-#banner {
+#page-landing #banner {
     background: var(--pink);
     border-radius: 1.875rem;
 
@@ -65,22 +65,22 @@ main {
     
 }
 
-#banner div {
+#page-landing #banner div {
     width: 40%;
 }
 
-#banner h1 {
+#page-landing #banner h1 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-#banner p {
+#page-landing #banner p {
     opacity: 0.7;
     font-size: 1.125rem;
     line-height: 1.75rem;
 }
 
-#banner img {
+#page-landing #banner img {
     position: relative;
     /* top:4.125rem; */
     right:6.25rem;
@@ -88,12 +88,14 @@ main {
 }
 
 /** TOP RECIPES *****/
-#top-recipes h1 {
+#page-landing #top-recipes h1 {
     font-size: 1.5rem;
     margin-bottom:1.25rem ;
 }
 
-#top-recipes .cards {
+/** CARDS **/
+
+#page-landing #top-recipes .cards {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
@@ -101,22 +103,22 @@ main {
     margin-bottom: 1.875rem;
 }
 
-#top-recipes .card {
+#page-landing #top-recipes .card {
     margin: 0 auto;
 }
 
-#top-recipes .card img {
+#page-landing #top-recipes .card img {
     border-radius: 0.938rem;
     margin-bottom: 1.25rem;
     max-width: 100%;
 }
 
-#top-recipes .card h2 {
+#page-landing #top-recipes .card h2 {
     font-size: 1.125rem;
     font-weight: 400;
 }
 
-#top-recipes .card p {
+#page-landing #top-recipes .card p {
     font-size: 0.875rem;
     color: var(--text-light);
 }
