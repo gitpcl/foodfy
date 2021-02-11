@@ -34,6 +34,7 @@
 - [NPM]()
 - [Express]()
 - [Nodemon]()
+- [Nunjucks]()
 
 ## :memo: License
 
