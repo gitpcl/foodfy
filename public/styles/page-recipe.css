@@ -1,0 +1,64 @@
+#page-recipe img {
+    border-radius: 0.938rem;
+    width: 100%;
+    height: 17.5rem;
+
+    margin-bottom: 3.125rem;
+}
+
+#page-recipe h1,
+#page-recipe p {
+    text-align: center;
+}
+
+#page-recipe h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2.25rem;
+}
+
+#page-recipe p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 3.125rem;
+}
+
+/** ACCORDION **************/
+/** This class will hide all the body by default **/
+#accordion .acc-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+#accordion .acc-body{
+    display : none;
+
+}
+ /** This class will show the body if it has "active" parent class. "active" class will be added to panel div **/
+#accordion .active .acc-body {
+    font-size: 1.125rem;
+    color: var(--text-light-2);
+    line-height: 1.75rem;
+
+    margin-bottom: 2.438rem;
+
+    display : block;
+}
+
+#accordion button {
+    font-size: 0.75rem;
+    color: var(--gray-light);
+    font-family: 700;
+    margin-left: 0.5rem;
+    background: transparent;
+    border: none;
+}
+
+#accordion li {
+    margin-left: 1rem;
+}
+
+/** MOBILE Version *******/
+#accordion .acc-header {
+    font-size: 1.4rem;
+}
