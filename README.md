@@ -30,6 +30,11 @@
 - [Sistema de Login Foodfy]()
 - [Conceitos Avançados]()
 
+## :computer: Dependencias
+- [NPM]()
+- [Express]()
+- [Nodemon]()
+
 ## :memo: License
 
 This project is under an MIT license. Please check the [LICENSE](LICENSE.md) for more information.

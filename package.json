@@ -1,0 +1,24 @@
+{
+  "name": "foodfy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitpcl/foodfy.git"
+  },
+  "author": "Pedro Lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitpcl/foodfy/issues"
+  },
+  "homepage": "https://github.com/gitpcl/foodfy#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
