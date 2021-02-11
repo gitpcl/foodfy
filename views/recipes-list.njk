@@ -1,0 +1,56 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+    <title>Lista de Receitas | Foodfy</title>
+{% endblock%}
+
+{% block links %}
+    <link rel="stylesheet" href="./styles/page-recipes-list.css">
+    <link rel="stylesheet" href="./styles/cards.css">
+{% endblock %}
+
+{% block header %}
+    <header>
+        <div class="header-wrapper">
+            <a href="/" id="logo"><img src="./assets/logo-white.png" alt="Logomarca do Foodfy"></a>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <main id="page-recipes-list">
+        <h1>Gerenciar receitas</h1>
+
+        <section id="recipes-list">
+            <div class="cards">
+                {% for item in items %}
+                <div class="card" id="{{ item.id }}">
+                    <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
+                    <div class="card-info-wrapper">
+                        <h2>{{ item.title }}</h2>
+                        <p>por {{ item.author }}</p>
+                        <button>Visualizar</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </section>
+    </main>
+{% endblock %}
+
+{% block modal %}
+    <div class="modal-overlay">
+        <div class="modal">
+            <img src="" alt="Imagem da receita">
+            <h2></h2>
+            <p></p>
+
+            <a href="#" class="close-modal">Fechar Modal</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="./scripts/script.js"></script>
+{% endblock %}

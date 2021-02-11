@@ -2,6 +2,7 @@
 
 :root {
     --bg: rgba(0,0,0,0.7);
+    --bg-admin: #111111;
 
     --white: #fff;
     --gray: #EEEEEE;
@@ -11,6 +12,7 @@
     --text: #111111;
     --text-light: #777777;
     --text-light-2: #444444;
+    --text-purple: #6558C3;
 
     font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +23,7 @@
     box-sizing: border-box;
 }
 
-header,
+.header-wrapper,
 main {
     width: 80%;
     margin: 0 auto;

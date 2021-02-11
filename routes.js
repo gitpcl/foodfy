@@ -30,4 +30,20 @@ routes.get("/recipe", function (req, res) {
     res.render("recipe", { item: recipe })
 })
 
+routes.get("/recipes-list", function(req, res) {
+    return res.render('recipes-list', { items: recipes })
+})
+
+routes.get("/recipe-detail", function(req, res) {
+    return res.render('recipe-detail', { items: recipes })
+})
+
+routes.get("/recipes-edit", function(req, res) {
+    return res.render('recipes-edit', { items: recipes })
+})
+
+routes.get("/recipe-create", function(req, res) {
+    return res.render('recipe-create', { items: recipes })
+})
+
 module.exports = routes

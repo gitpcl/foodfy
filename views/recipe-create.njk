@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+    <title>Criar Receita | Foodfy</title>
+{% endblock%}
+
+{% block links %}
+    <link rel="stylesheet" href="./styles/page-recipe-create.css">
+    <link rel="stylesheet" href="./styles/cards.css">
+{% endblock %}
+
+{% block content %}
+    <main id="page-recipe-create">
+
+        <section id="recipes">
+            <div class="cards">
+                {% for item in items %}
+                <div class="card" id="{{ item.id }}">
+                    <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
+                    <h2>{{ item.title }}</h2>
+                    <p>por {{ item.author }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </section>
+    </main>
+{% endblock %}
+
+{% block modal %}
+    <div class="modal-overlay">
+        <div class="modal">
+            <img src="" alt="Imagem da receita">
+            <h2></h2>
+            <p></p>
+
+            <a href="#" class="close-modal">Fechar Modal</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="./scripts/script.js"></script>
+{% endblock %}

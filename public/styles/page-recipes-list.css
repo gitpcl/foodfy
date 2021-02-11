@@ -1,0 +1,26 @@
+header {
+    background: var(--bg-admin);
+    margin-bottom: 3.125rem;
+}
+
+#page-recipes-list {
+    max-width: 1100px;
+}
+
+#page-recipes-list h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+}
+
+#page-recipes-list button {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text-purple);
+    margin-top: 0.625rem;
+
+    border: none;
+    background: transparent;
+}
+
+

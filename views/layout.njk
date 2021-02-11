@@ -22,13 +22,17 @@
     
 </head>
 <body>
+    {% block header %}
     <header>
-        <a href="/" id="logo"><img src="./assets/logo.png" alt="Logomarca do Foodfy"></a>
-        <nav>
-            <a href="/about">Sobre</a>
-            <a href="/recipes">Receitas</a>
-        </nav>
+        <div class="header-wrapper">
+            <a href="/" id="logo"><img src="./assets/logo.png" alt="Logomarca do Foodfy"></a>
+            <nav>
+                <a href="/about">Sobre</a>
+                <a href="/recipes">Receitas</a>
+            </nav>
+        </div>
     </header>
+    {% endblock %}
     
     {% block content %}{% endblock %}
 

@@ -1,10 +1,10 @@
-header {
+.header-wrapper {
+    max-width: 1100px;
+
     padding: 2rem 0;
     display: flex;
     justify-content: start;
     align-items: center;
-    max-width: 1100px;
-
 }
 
 #logo {
