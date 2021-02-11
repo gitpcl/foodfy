@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodfy</title>
+{% extends "layout.html" %}
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/page-landing.css">
-    <link rel="stylesheet" href="./styles/cards.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-</head>
-<body>
-    <header>
-        <a href="/" id="logo"><img src="./assets/logo.png" alt="Logomarca do Foodfy"></a>
-        <nav>
-            <a href="about.html">Sobre</a>
-            <a href="recipes.html">Receitas</a>
-        </nav>
-    </header>
+{% block content %}
     <main id="page-landing">
         <section id="banner">
             <div>
@@ -71,8 +51,4 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>Todos os direitos reservados, receitas Foodfy.</p>
-    </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas | Foodfy</title>
+{% extends "layout.html" %}
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/header.css">
+{% block title %}
+    <title>Receitas | Foodfy</title>
+{% endblock%}
+
+{% block links %}
     <link rel="stylesheet" href="./styles/page-recipes.css">
     <link rel="stylesheet" href="./styles/cards.css">
-    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/modal.css">
-</head>
-<body>
-    <header>
-        <a href="/" id="logo"><img src="./assets/logo.png" alt="Logomarca do Foodfy"></a>
-        <nav>
-            <a href="about.html">Sobre</a>
-            <a href="recipes.html">Receitas</a>
-        </nav>
-    </header>
+{% endblock %}
+
+{% block content %}
     <main id="page-recipes">
 
         <section id="recipes">
@@ -99,10 +88,9 @@
 
         </section>
     </main>
-    <footer>
-        <p>Todos os direitos reservados, receitas Foodfy.</p>
-    </footer>
+{% endblock %}
 
+{% block modal %}
     <div class="modal-overlay">
         <div class="modal">
             <img src="" alt="Imagem da receita">
@@ -114,5 +102,4 @@
     </div>
 
     <script src="./scripts/modal.js"></script>
-</body>
-</html>
+{% endblock %}
