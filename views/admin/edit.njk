@@ -1,0 +1,70 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+    <title>{{ item.title }} | Foodfy</title>
+{% endblock%}
+
+{% block links %}
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/header.css">
+
+    <link rel="stylesheet" href="../../../styles/page-recipe-edit.css">
+    
+    <link rel="stylesheet" href="../../../styles/footer.css">
+{% endblock %}
+
+{% block header %}
+    <header>
+        <div class="header-wrapper">
+            <a href="/" id="logo"><img src="../../../assets/logo-white.png" alt="Logomarca do Foodfy"></a>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <main id="page-recipe-edit">
+        <div class="recipe-header">
+            <h2>Editando receita: {{ item.title }}</h2>
+            <div class="buttons">
+                <button id="delete">Deletar</button>
+                <button id="save">Salvar Receita</button>
+            </div>
+        </div>
+
+        <form action="" method="GET">
+            <fieldset>
+                <legend>Editando Receita</legend>
+
+                <div class="input-block">
+                    <label for="image">Imagem da receita</label>
+                    <input id="image" name="image" placeholder="{{ item.image }}">
+                </div>
+
+                <div class="input-block">
+                    <label for="ingredients">Ingredientes</label>
+                    <input id="ingredients" placeholder="{{ item.ingredients[0] }}">
+                    <input id="ingredients" name="ingredients" placeholder="{{ item.ingredients[1] }}">
+
+                    <button>Adicionar novo ingrediente</button>
+                </div>
+
+                <div class="input-block">
+                    <label for="step">Modo de preparo</label>
+                    <input id="step" placeholder="{{ item.preparation[0] }}">
+                    <input id="step" name="step" placeholder="{{ item.preparation[1] }}">
+                    
+                    <button>Adicionar novo passo</button>
+                </div>
+
+                <div class="input-block">
+                    <label for="info">Informações adicionais</label>
+                    <textarea id="info" name="info"></textarea>
+                </div>
+
+            </fieldset>
+
+        </form>
+        
+    </main>
+{% endblock %}
+

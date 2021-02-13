@@ -5,30 +5,30 @@
 {% endblock%}
 
 {% block links %}
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/header.css">
 
-    <link rel="stylesheet" href="./styles/page-recipe-detail.css">
+    <link rel="stylesheet" href="../../styles/page-recipe-show.css">
     
-    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
 {% endblock %}
 
 {% block header %}
     <header>
         <div class="header-wrapper">
-            <a href="/" id="logo"><img src="./assets/logo-white.png" alt="Logomarca do Foodfy"></a>
+            <a href="/" id="logo"><img src="../../assets/logo-white.png" alt="Logomarca do Foodfy"></a>
         </div>
     </header>
 {% endblock %}
 
 {% block content %}
-    <main id="page-recipe-detail">
+    <main id="page-recipe-show">
         <div class="recipe-header">
             <h2>Receita: {{ item.title }}</h2>
             <button>Editar Receita</button>
         </div>
 
-        <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
+        <img src="{{ item.image }}" alt="Imagem de {{ item.title }}">
 
         <h1>{{ item.title }}</h1>
         <p>por {{ item.author }}</p>
@@ -38,7 +38,7 @@
             <div class="info-body">
                 <ul>
                     {% for ingredients in item.ingredients %}
-                    <li>{{ ingredients }}</li>
+                    <li>- {{ ingredients }}</li>
                     {% endfor %}
                 </ul>
             </div>

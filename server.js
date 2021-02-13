@@ -6,6 +6,9 @@ const server = express()
 
 server.use(express.static('public'))
 server.use(routes)
+server.use((req, res) => {
+    res.status(404).render("not-found");
+});
 
 server.set('view engine', 'njk')
 

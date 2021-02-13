@@ -4,6 +4,7 @@
     --bg: rgba(0,0,0,0.7);
     --bg-admin: #111111;
     --bg-btn: #6558C3;
+    --bg-btn-delete: #DC4747;
 
     --white: #fff;
     --gray: #EEEEEE;
@@ -14,6 +15,8 @@
     --text-light: #777777;
     --text-light-2: #444444;
     --text-purple: #6558C3;
+
+    --input-border: #DDDDDD;
 
     font-family: 'Roboto', sans-serif;
 }
