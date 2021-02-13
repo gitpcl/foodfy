@@ -1,44 +1,61 @@
 {% extends "layout.njk" %}
 
 {% block title %}
-    <title>Detalhes da Receita | Foodfy</title>
+    <title>{{ item.title }} | Foodfy</title>
 {% endblock%}
 
 {% block links %}
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
+
     <link rel="stylesheet" href="./styles/page-recipe-detail.css">
-    <link rel="stylesheet" href="./styles/cards.css">
+    
+    <link rel="stylesheet" href="./styles/footer.css">
+{% endblock %}
+
+{% block header %}
+    <header>
+        <div class="header-wrapper">
+            <a href="/" id="logo"><img src="./assets/logo-white.png" alt="Logomarca do Foodfy"></a>
+        </div>
+    </header>
 {% endblock %}
 
 {% block content %}
     <main id="page-recipe-detail">
+        <div class="recipe-header">
+            <h2>Receita: {{ item.title }}</h2>
+            <button>Editar Receita</button>
+        </div>
 
-        <section id="recipes">
-            <div class="cards">
-                {% for item in items %}
-                <div class="card" id="{{ item.id }}">
-                    <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
-                    <h2>{{ item.title }}</h2>
-                    <p>por {{ item.author }}</p>
-                </div>
-                {% endfor %}
+        <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
+
+        <h1>{{ item.title }}</h1>
+        <p>por {{ item.author }}</p>
+
+        <div id="recipe-info">
+            <h2>Ingredientes</h2>
+            <div class="info-body">
+                <ul>
+                    {% for ingredients in item.ingredients %}
+                    <li>{{ ingredients }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            
-        </section>
+
+            <h2>Modo de preparo</h2>
+            <div class="info-body">
+                <ul>
+                    {% for steps in item.preparation %}
+                    <li>{{ steps }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <h2>Informações adicionais</h2>
+            <div class="info-body">{{ item.information }}</div>
+        </div> 
+        
     </main>
 {% endblock %}
 
-{% block modal %}
-    <div class="modal-overlay">
-        <div class="modal">
-            <img src="" alt="Imagem da receita">
-            <h2></h2>
-            <p></p>
-
-            <a href="#" class="close-modal">Fechar Modal</a>
-        </div>
-    </div>
-{% endblock %}
-
-{% block script %}
-    <script src="./scripts/script.js"></script>
-{% endblock %}

@@ -5,9 +5,14 @@
 {% endblock%}
 
 {% block links %}
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
+
     <link rel="stylesheet" href="./styles/page-recipes.css">
     <link rel="stylesheet" href="./styles/cards.css">
     <link rel="stylesheet" href="./styles/modal.css">
+    
+    <link rel="stylesheet" href="./styles/footer.css">
 {% endblock %}
 
 {% block content %}
@@ -16,8 +21,8 @@
         <section id="recipes">
             <div class="cards">
                 {% for item in items %}
-                <div class="card" id="{{ item.id }}">
-                    <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
+                <div class="card" id="{{ items.indexOf(item) }}">
+                    <img src="{{ item.image }}" alt="Imagem de {{ item.title }}">
                     <h2>{{ item.title }}</h2>
                     <p>por {{ item.author }}</p>
                 </div>

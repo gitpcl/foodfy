@@ -5,12 +5,29 @@
 {% endblock%}
 
 {% block links %}
-    <link rel="stylesheet" href="./styles/page-recipe.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+
+    <link rel="stylesheet" href="../styles/page-recipe.css">
+    
+    <link rel="stylesheet" href="../styles/footer.css">
+{% endblock %}
+
+{% block header %}
+    <header>
+        <div class="header-wrapper">
+            <a href="/" id="logo"><img src="../assets/logo.png" alt="Logomarca do Foodfy"></a>
+            <nav>
+                <a href="/about">Sobre</a>
+                <a href="/recipes">Receitas</a>
+            </nav>
+        </div>
+    </header>
 {% endblock %}
 
 {% block content %}
     <main id="page-recipe">
-        <img src="./assets/{{ item.id }}.png" alt="Imagem de {{ item.title }}">
+        <img src="{{ item.image }}" alt="Imagem de {{ item.title }}">
 
         <h1>{{ item.title }}</h1>
         <p>por {{ item.author }}</p>
@@ -47,5 +64,6 @@
 {% endblock %}
 
 {% block script %}
-    <script src="./scripts/accordion.js"></script>
+    <script src="../scripts/accordion.js"></script>
 {% endblock %}
+
