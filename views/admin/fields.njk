@@ -1,0 +1,81 @@
+<fieldset>
+    <legend>Editando Receita</legend>
+
+    <div class="input-block imagem">
+        <label for="image">Imagem da receita</label>
+        <input 
+            type="url" 
+            name="image" 
+            placeholder="https://"
+            value="{{ item.image }}">
+    </div>
+
+    <div class="input-block titulo">
+        <label for="title">Título</label>
+        <input 
+            name="title" 
+            placeholder="Escreva o titulo da sua receita"
+            value="{{ item.title }}">
+    </div>
+
+    <div class="input-block ingredients">
+        <label for="ingredients">Ingredientes</label>
+        <div id="ingredients">
+            {% if item.ingredients.length > 0 %}
+                {% for ingredient in item.ingredients %}
+                    <div class="ingredient">
+                        <input 
+                            name="ingredients[]" 
+                            placeholder="Escreva um ingrediente"
+                            required
+                            value="{{ ingredient }}">
+                        
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="ingredient">
+                    <input 
+                        name="ingredients[]" 
+                        placeholder="Escreva um ingrediente"
+                        required
+                        >
+                </div>
+            {% endif %}
+        </div>
+
+        <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+    </div>
+
+    <div class="input-block preparation">
+        <label for="preparation">Modo de preparo</label>
+        <div id="preparation">
+            {% if item.preparation.length > 0 %}
+                {% for step in item.preparation %}
+                <div class="preparation">
+                    <input 
+                        name="preparation[]" 
+                        placeholder="Escreva um passo"
+                        required
+                        value="{{ step }}">
+                </div>
+                {% endfor %} 
+            {% else %}
+                <div class="preparation">
+                    <input 
+                        name="preparation[]" 
+                        placeholder="Escreva um passo"
+                        >
+                </div>
+            {% endif %}
+        </div>
+
+        <button type="button" class="add-preparation">Adicionar novo ingrediente</button>
+    </div>
+
+    <div class="input-block">
+        <label for="information">Informações adicionais</label>
+        <textarea name="information" placeholder="Adicione mais informações sobre a receita">{{ item.information }}</textarea>
+    </div>
+
+</fieldset>
+

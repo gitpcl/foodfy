@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../../styles/header.css">
 
     <link rel="stylesheet" href="../../../styles/page-recipe-edit.css">
+    <link rel="stylesheet" href="../../../styles/form.css">
     
     <link rel="stylesheet" href="../../../styles/footer.css">
 {% endblock %}
@@ -25,46 +26,29 @@
     <main id="page-recipe-edit">
         <div class="recipe-header">
             <h2>Editando receita: {{ item.title }}</h2>
-            <div class="buttons">
-                <button id="delete">Deletar</button>
-                <button id="save">Salvar Receita</button>
+            <div class="btn">
+                <form method="POST" action="/admin/recipes?_method=DELETE" id="recipe-delete">
+                    <input type="hidden" name="id" value="{{ item.id }}">
+                    <button id="delete" type="submit">Deletar</button>
+                </form>
+
+                <button id="save" type="submit" form="recipe-form">Salvar Receita</button>
             </div>
         </div>
 
-        <form action="" method="GET">
-            <fieldset>
-                <legend>Editando Receita</legend>
-
-                <div class="input-block">
-                    <label for="image">Imagem da receita</label>
-                    <input id="image" name="image" placeholder="{{ item.image }}">
-                </div>
-
-                <div class="input-block">
-                    <label for="ingredients">Ingredientes</label>
-                    <input id="ingredients" placeholder="{{ item.ingredients[0] }}">
-                    <input id="ingredients" name="ingredients" placeholder="{{ item.ingredients[1] }}">
-
-                    <button>Adicionar novo ingrediente</button>
-                </div>
-
-                <div class="input-block">
-                    <label for="step">Modo de preparo</label>
-                    <input id="step" placeholder="{{ item.preparation[0] }}">
-                    <input id="step" name="step" placeholder="{{ item.preparation[1] }}">
-                    
-                    <button>Adicionar novo passo</button>
-                </div>
-
-                <div class="input-block">
-                    <label for="info">Informações adicionais</label>
-                    <textarea id="info" name="info"></textarea>
-                </div>
-
-            </fieldset>
-
-        </form>
+        <form method="POST" action="/admin/recipes?_method=PUT" id="recipe-form">
         
+        {% include 'admin/fields.njk' %}
+
+        <input type="hidden" name="id" value="{{ item.id }}">
+        </form>
+
     </main>
 {% endblock %}
+
+{% block script %}
+    <script src="../../../scripts/create.js"></script>
+{% endblock %}
+
+
 

@@ -1,0 +1,52 @@
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    visibility: hidden;
+}
+
+fieldset label {
+    display: block;
+
+    margin-bottom: 0.625rem;
+    margin-top: 1.875rem;
+    font-weight: 700;
+}
+
+.input-block input,
+.input-block textarea {
+    width: 100% !important;
+    min-height: 3.063rem;
+
+    border: 1px solid var(--input-border);
+    border-radius: 0.25rem;
+
+    padding: 0.938rem 1.25rem;
+
+    outline: none;
+}
+
+.input-block textarea {
+    height: clamp(12rem, 16.063rem, 24rem);
+    resize: vertical;
+    margin-bottom: 38.063rem;
+}
+
+.new-ingredient + .new-ingredient {
+    margin-top: 0.625rem;
+}
+
+.new-preparation + .new-preparation {
+    margin-top: 0.625rem;
+}
+
+div + button {
+    margin-top: 0.938rem;
+
+    padding: 0;
+
+    background: transparent;
+    font-weight: 700;
+    color: var(--text-purple);
+}

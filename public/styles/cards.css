@@ -11,9 +11,11 @@
 }
 
 .card img {
+    height: 8.75rem;
     border-radius: 0.938rem;
     margin-bottom: 1.25rem;
-    max-width: 100%;
+    width: 100%;
+    
 }
 .card h2 {
     font-size: 1.125rem;
@@ -42,7 +44,8 @@
 }
 
 #recipes-list .card img {
-    width: 40%;
+    width: 50%;
+    height: 5rem;
     margin-right: 1.25rem;
 }
 
